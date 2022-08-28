@@ -1,0 +1,11 @@
+.tasks {
+    transition: 0.3s;
+    perspective: 1000px;
+}
+
+.tasks:hover {
+    transform: rotate(-3deg) scale(1.02);
+    box-shadow: 0 0 1.5rem rgb(17 17 17 / 70%);
+    cursor: pointer;
+}
+

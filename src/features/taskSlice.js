@@ -31,6 +31,7 @@ export const taskSlice = createSlice({
       state.completedTasks = state.completedTasks.filter(el => el.id !== action.payload)
     },
     updateRedux: (state, action) => {
+      console.log(action.payload)
       state.tasks = action.payload.tasks
       state.ongoingTasks = action.payload.ongoingTasks
       state.completedTasks = action.payload.completedTasks

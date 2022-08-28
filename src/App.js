@@ -16,19 +16,23 @@ function App() {
   const allTasks = useSelector(state => state.tasks)
 
   useEffect(() => {
-    console.log(localStorage.getItem('tasks'))
-    const loadedTasks = localStorage.getItem('tasks') != 'undefined' ? JSON.parse(localStorage.getItem('tasks')) : {
+    // console.log(localStorage.getItem('tasks'))
+    const loadedTasks = (localStorage.getItem('tasks') != 'undefined' || localStorage.getItem('tasks') != null) ? JSON.parse(localStorage.getItem('tasks')) : {
       tasks: [],
       ongoingTasks: [],
       completedTasks: []
     }
+    console.log(localStorage.getItem('tasks'))
     console.log(loadedTasks)
-    dispatch(updateRedux(loadedTasks))
+    if (loadedTasks !== null) {
+      dispatch(updateRedux(loadedTasks))
+    }
   }, [])
 
   useEffect(() => {
     if (!firstLoading) {
       localStorage.setItem('tasks', JSON.stringify(allTasks))
+      console.log('Hell0 from 2nd useEffect')
     }
     firstLoading = false;
    
@@ -41,7 +45,7 @@ function App() {
           <div className="task-wrapper">
               <Tasks />
               <OngoingTasks />
-              <CompletedTasks />
+              {/* <CompletedTasks /> */}
           </div>
         </div>
     </Layout>

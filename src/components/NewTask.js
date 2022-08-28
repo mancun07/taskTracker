@@ -27,8 +27,8 @@ const NewTask = () => {
 
   return (
     <form className={classes[`new-task`]} onSubmit={submitHandler}>
-      <input type="text" ref={taskRef}/>
-      <button>Добавить</button>
+      <input type="text" ref={taskRef}/><br/>
+      <button>Добавить задачу</button>
     </form>
   )
 }
