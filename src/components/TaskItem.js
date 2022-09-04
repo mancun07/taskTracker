@@ -45,9 +45,9 @@ const TaskItem = (props) => {
   return (
     <Fragment>
       <motion.li initial={{x: '-100vw', scale: 2}} animate={{ x: 0, scale: 1 }}>
-          <span>{props.item.task}</span>
+          <span onClick={openRemarkHandler}>{props.item.task}</span>
           <IconButton onClick={addOngoingTaskHandler} aria-label="add to shopping cart">
-            < ArrowForwardIcon   sx={{ color: pink[500] }}/>
+            < ArrowForwardIcon   sx={{ color: yellow[500] }}/>
           </IconButton>
           {/* <IconButton aria-label="delete">
             <CheckIcon onClick={addCompletedTaskHandler}/>
@@ -57,9 +57,9 @@ const TaskItem = (props) => {
             <DeleteIcon sx={{ color: green[500] }}/>
           </IconButton>
           {/* <Checkbox {...label} /> */}
-          <IconButton onClick={openRemarkHandler} aria-label="delete">
+          {/* <IconButton onClick={openRemarkHandler} aria-label="delete">
             <AppleIcon  sx={{ color: yellow[500] }}/>
-          </IconButton>
+          </IconButton> */}
       </motion.li>
       {/* {remarkIsShown && <NewRemark />} */}
     </Fragment>

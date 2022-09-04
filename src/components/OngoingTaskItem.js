@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { removeOnGoingTask, addCompletedTask} from '../features/taskSlice';
+import { removeOnGoingTask, addCompletedTask, saveClickedTask} from '../features/taskSlice';
+import { toggleRemarkState} from '../features/uiSlice';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -25,9 +26,14 @@ const OngoingTaskItem = (props) => {
     dispatch(removeOnGoingTask(props.item.id))  
   }
 
+  const openRemarkHandler = () => {
+    dispatch(toggleRemarkState())
+    dispatch(saveClickedTask(props.item))
+  }
+
   return (
     <motion.li initial={{y: '-100vh'}} animate={{y: 0}}>
-        <span>{props.item.task}</span>
+        <span onClick={openRemarkHandler}>{props.item.task}</span>
         {/* <button onClick={addOnCompletedTaskHandler}>Вып-но</button> */}
         <IconButton onClick={removeTaskHandler} aria-label="delete">
            <DeleteIcon />
