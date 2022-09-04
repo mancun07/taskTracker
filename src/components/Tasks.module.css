@@ -2,8 +2,9 @@
     transition: 0.3s;
     position: relative;
     overflow: hidden;
-    min-width: 400px;
+    min-width: 450px;
     margin: 0 auto 10px;
+    max-width: 90%;
     /* box-shadow: 0 0 20px #eee; */
    
 }

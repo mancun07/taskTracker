@@ -41,7 +41,10 @@ export const taskSlice = createSlice({
       // const neededItem = state.tasks.find(el => el.id === action.payload.id);
       // neededItem.remark = action.payload.remark;
       const id = state.chosenTask.id;
-      const requiredTask = state.tasks.find(el => el.id === id);
+      let requiredTask = state.tasks.find(el => el.id === id);
+      if (requiredTask === null || requiredTask === undefined) {
+        requiredTask = state.ongoingTasks.find(el => el.id === id);
+      }
       requiredTask.remark = action.payload;
     },
     saveClickedTask: (state, action) => {

@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CheckIcon from '@mui/icons-material/Check';
+import { green } from '@mui/material/colors';
 import Checkbox from '@mui/material/Checkbox';
 import {motion} from 'framer-motion';
 
@@ -36,8 +37,8 @@ const OngoingTaskItem = (props) => {
         <span onClick={openRemarkHandler}>{props.item.task}</span>
         {/* <button onClick={addOnCompletedTaskHandler}>Вып-но</button> */}
         <IconButton onClick={removeTaskHandler} aria-label="delete">
-           <DeleteIcon />
-        </IconButton>
+            <DeleteIcon sx={{ color: green[500] }}/>
+          </IconButton>
         <Checkbox {...label}/>
     </motion.li>
   )

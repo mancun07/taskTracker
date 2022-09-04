@@ -14,6 +14,11 @@ const NewTask = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     const taskRefValue = taskRef.current.value;
+
+    if (taskRefValue === '') {
+      alert('Блин, задачу введи!');
+      return;
+    }
     // localStorage.setItem('task', JSON.stringify({
     //   id: Math.random(),
     //   task: taskRefValue
