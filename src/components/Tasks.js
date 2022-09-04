@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import TaskItem from './TaskItem'
 import Card from './UI/Card'
 import classes from './Tasks.module.css'
+import {motion} from 'framer-motion';
 
 
 const Tasks = () => {

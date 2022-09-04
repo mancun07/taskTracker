@@ -44,7 +44,7 @@ const TaskItem = (props) => {
 
   return (
     <Fragment>
-      <motion.li initial={{x: '-100vw', scale: 2}} animate={{ x: 0, scale: 1 }}>
+      <motion.li initial={{x: '-100vw'}} animate={{ x: 0 }}>
           <span onClick={openRemarkHandler}>{props.item.task}</span>
           <IconButton onClick={addOngoingTaskHandler} aria-label="add to shopping cart">
             < ArrowForwardIcon   sx={{ color: yellow[500] }}/>
