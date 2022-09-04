@@ -5,11 +5,12 @@
     min-width: 450px;
     margin: 0 auto 10px;
     max-width: 90%;
+    box-shadow: 0 0 20px #eee;
 }
 
 .ongoingTasks:hover {
-    transform: rotate(-1deg) scale(1.02);
-    box-shadow: 0 0 20px #eee;
+    /* transform: rotate(-1deg) scale(1.02);
+    box-shadow: 0 0 20px #eee; */
     cursor: pointer;
 }
 
