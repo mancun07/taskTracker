@@ -19,6 +19,7 @@ const Tasks = () => {
                   return <TaskItem key={item.id} item={item}/>
               })}
           </ul>
+          <div className={classes.label}>В работу</div>
       </Card>
     </div>
 

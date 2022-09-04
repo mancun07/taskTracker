@@ -29,8 +29,8 @@ const OngoingTaskItem = (props) => {
     <motion.li initial={{y: '-100vh'}} animate={{y: 0}}>
         <span>{props.item.task}</span>
         {/* <button onClick={addOnCompletedTaskHandler}>Вып-но</button> */}
-        <IconButton aria-label="delete">
-           <DeleteIcon onClick={removeTaskHandler}/>
+        <IconButton onClick={removeTaskHandler} aria-label="delete">
+           <DeleteIcon />
         </IconButton>
         <Checkbox {...label}/>
     </motion.li>

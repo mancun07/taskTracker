@@ -20,14 +20,16 @@ const NewTask = () => {
     // }))
     dispatch(addTask({
       id: Math.random(),
-      task: taskRefValue
+      task: taskRefValue,
+      remark: null
     }));
+    taskRef.current.value = '';
 
   }
 
   return (
     <form className={classes[`new-task`]} onSubmit={submitHandler}>
-      <input type="text" ref={taskRef}/><br/>
+      <input type="text" ref={taskRef}/>
       <button>Добавить задачу</button>
     </form>
   )

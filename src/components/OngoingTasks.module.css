@@ -1,13 +1,12 @@
-.tasks {
+.ongoingTasks {
     transition: 0.3s;
     position: relative;
     overflow: hidden;
     min-width: 400px;
     margin: 0 auto 10px;
-   
 }
 
-.tasks:hover {
+.ongoingTasks:hover {
     transform: rotate(-1deg) scale(1.02);
     box-shadow: 0 0 20px #eee;
     cursor: pointer;
@@ -25,8 +24,4 @@
     padding:0 15px;
     width:170px;
     text-align: center;
-
-
 }
-
-
