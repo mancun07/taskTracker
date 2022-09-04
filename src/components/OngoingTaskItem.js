@@ -11,7 +11,7 @@ import Checkbox from '@mui/material/Checkbox';
 import {motion} from 'framer-motion';
 
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+// const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 const OngoingTaskItem = (props) => {
 
@@ -39,7 +39,7 @@ const OngoingTaskItem = (props) => {
         <IconButton onClick={removeTaskHandler} aria-label="delete">
             <DeleteIcon sx={{ color: green[500] }}/>
           </IconButton>
-        <Checkbox {...label}/>
+        {/* <Checkbox {...label}/> */}
     </motion.li>
   )
 }
