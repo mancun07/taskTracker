@@ -26,3 +26,11 @@
     width:170px;
     text-align: center;
 }
+
+
+@media screen and (max-width: 480px) {
+    .ongoingTasks {
+        min-width: 0; 
+        width: 95%;  
+  }
+}
